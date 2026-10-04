@@ -1,0 +1,470 @@
+
+/* ========================================
+   MOBILE PHYSIO - CONDITIONS PAGE
+======================================== */
+
+.conditions-page {
+  --teal: #087f8c;
+  --teal-dark: #075866;
+  --teal-light: #e8f7f8;
+  --navy: #10334b;
+  --text: #526b7b;
+  --border: #dceff1;
+
+  color: var(--navy);
+  background: #fff;
+}
+
+.conditions-page *,
+.conditions-page *::before,
+.conditions-page *::after {
+  box-sizing: border-box;
+}
+
+.conditions-page p {
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.conditions-page h1,
+.conditions-page h2,
+.conditions-page h3,
+.conditions-page p {
+  overflow-wrap: anywhere;
+}
+
+.conditions-page .eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+/* HERO */
+
+.conditions-hero {
+  /* The shared navbar is fixed and does not take up document flow. */
+  padding: 130px 0 75px;
+  background:
+    radial-gradient(circle at 80% 10%, #d7f3f5 0, transparent 30%),
+    linear-gradient(120deg, #f8fdfe, #eaf9fb);
+}
+
+.conditions-hero-inner {
+  width: min(1400px, calc(100% - 80px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.conditions-hero-content h1 {
+  margin: 0 0 22px;
+  font-size: clamp(42px, 4.5vw, 62px);
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+.conditions-hero-content h1 span {
+  display: block;
+  color: var(--teal);
+}
+
+.conditions-hero-content > p {
+  max-width: 650px;
+  margin: 0 0 28px;
+}
+
+.condition-btn {
+  min-height: 49px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 24px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #159aa5, #075866);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 22px #087f8c20;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.condition-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px #087f8c30;
+}
+
+/* HERO VISUAL */
+
+.conditions-hero-visual {
+  padding: 45px 38px;
+  border: 1px solid #dceff1;
+  border-radius: 30px 80px 30px 65px;
+  background: #ffffffc9;
+  box-shadow: 0 20px 55px #10334b0c;
+}
+
+.hero-icon {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 25px;
+  border-radius: 20px;
+  background: var(--teal-light);
+  color: var(--teal);
+  font-size: 32px;
+}
+
+.conditions-hero-visual h3 {
+  margin: 0 0 12px;
+  font-size: 25px;
+  line-height: 1.4;
+}
+
+.conditions-hero-visual p {
+  margin: 0;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 25px;
+}
+
+.hero-tags span {
+  padding: 9px 12px;
+  border-radius: 30px;
+  background: var(--teal-light);
+  color: var(--teal-dark);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* INTRO */
+
+.conditions-intro {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 85px 24px 35px;
+  text-align: center;
+}
+
+.conditions-intro h2 {
+  margin: 0 0 18px;
+  font-size: clamp(30px, 3.2vw, 42px);
+  line-height: 1.2;
+}
+
+.conditions-intro > p {
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+/* CONDITION CATEGORIES */
+
+.condition-category {
+  padding: 55px 0 75px;
+}
+
+.category-tinted {
+  background: #f3fbfc;
+}
+
+.category-heading {
+  width: min(1400px, calc(100% - 80px));
+  margin: 0 auto 35px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.category-number {
+  flex: 0 0 58px;
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: var(--teal-light);
+  color: var(--teal);
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.category-heading h2 {
+  margin: 0 0 5px;
+  font-size: clamp(25px, 3vw, 36px);
+  line-height: 1.25;
+}
+
+.category-heading p {
+  margin: 0;
+}
+
+.condition-grid {
+  width: min(1400px, calc(100% - 80px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* CONDITION CARDS */
+
+.condition-card {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: linear-gradient(145deg, #fff, #f5fcfd);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.condition-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px #10334b10;
+}
+
+.condition-symbol {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 20px;
+  border-radius: 14px;
+  background: var(--teal-light);
+  color: var(--teal);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.condition-card h3 {
+  margin: 0 0 12px;
+  font-size: 19px;
+  line-height: 1.45;
+}
+
+.condition-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+/* CTA */
+
+.conditions-cta {
+  width: min(1400px, calc(100% - 80px));
+  margin: 20px auto 80px;
+  padding: 45px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  border-radius: 28px;
+  background: linear-gradient(120deg, #eaf9fb, #d9f2f5);
+}
+
+.conditions-cta > div {
+  max-width: 750px;
+}
+
+.conditions-cta h2 {
+  margin: 0 0 12px;
+  font-size: clamp(27px, 3vw, 38px);
+  line-height: 1.25;
+}
+
+.conditions-cta p {
+  margin: 0;
+}
+
+/* FOOTER */
+
+.site-footer {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  background: #082f40;
+  color: #fff;
+}
+
+.site-footer p {
+  margin: 8px 0 0;
+  color: #c7dce3;
+  font-size: 13px;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+  .conditions-hero-inner {
+    gap: 35px;
+  }
+
+  .condition-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .conditions-hero-visual {
+    padding: 32px 26px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .conditions-hero {
+    padding: 110px 0 45px;
+  }
+
+  .conditions-hero-inner {
+    width: calc(100% - 36px);
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .conditions-hero-content h1 {
+    font-size: clamp(36px, 9vw, 46px);
+  }
+
+  .conditions-hero-visual {
+    padding: 28px 23px;
+    border-radius: 24px 50px 24px 35px;
+  }
+
+  .conditions-intro {
+    padding: 60px 22px 25px;
+  }
+
+  .condition-category {
+    padding: 40px 0 50px;
+  }
+
+  .category-heading {
+    width: calc(100% - 36px);
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .category-number {
+    flex-basis: 45px;
+    width: 45px;
+    height: 45px;
+    border-radius: 14px;
+    font-size: 15px;
+  }
+
+  .category-heading h2 {
+    font-size: 25px;
+  }
+
+  .condition-grid {
+    width: calc(100% - 36px);
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .condition-card {
+    padding: 24px;
+  }
+
+  .conditions-cta {
+    width: calc(100% - 36px);
+    margin-bottom: 50px;
+    padding: 30px 24px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .site-footer {
+    padding: 30px 22px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .condition-btn,
+  .condition-card {
+    transition: none;
+  }
+}
+
+/* Conditions Hero Image */
+.conditions-image-card {
+  position: relative;
+  min-height: 360px;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 30px 75px 30px 65px;
+  background: #e8f7f8;
+}
+
+.conditions-hero-image {
+  display: block;
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.conditions-image-caption {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid #ffffffa8;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 8px 25px #10334b12;
+}
+
+.conditions-image-caption .hero-icon {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  font-size: 25px;
+}
+
+.conditions-image-caption h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+
+.conditions-image-caption p {
+  margin: 0;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .conditions-image-card {
+    min-height: 300px;
+    border-radius: 24px 50px 24px 35px;
+  }
+
+  .conditions-hero-image {
+    height: 330px;
+  }
+
+  .conditions-image-caption {
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    padding: 12px;
+  }
+}

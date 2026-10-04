@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gallery | Mobile Physio</title>
+  <meta name="description" content="Explore Mobile Physio's physiotherapy treatments, rehabilitation exercises and home care services.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/whatsapp.css">
+  <link rel="stylesheet" href="css/gallery.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar container" aria-label="Main navigation">
+
+      <a href="index.html" class="nav-logo" aria-label="Mobile Physio Home">
+        <img src="assets/images/logo.png" alt="Mobile Physio Logo">
+        <span class="logo-text">
+          <strong>MOBILE</strong>
+          <strong>PHYSIO</strong>
+          <small>PHYSIOTHERAPY AT YOUR HOME</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link" data-page="index.html">Home</a>
+        <a href="about.html" class="nav-link" data-page="about.html">About</a>
+        <a href="services.html" class="nav-link" data-page="services.html">Services</a>
+        <a href="conditions.html" class="nav-link" data-page="conditions.html">Conditions</a>
+        <a href="our-team.html" class="nav-link" data-page="our-team.html">Our Team</a>
+        <a href="gallery.html" class="nav-link active" data-page="gallery.html" aria-current="page">Gallery</a>
+        <a href="payment-plan.html" class="nav-link" data-page="payment-plan.html">Payment Plan</a>
+        <a href="contact.html" class="nav-link" data-page="contact.html">Contact</a>
+
+        <a href="contact.html#appointment" class="nav-appointment">
+          <span>Book Appointment</span>
+          <span class="appointment-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+    </nav>
+  </header>
+
+  <main class="gallery-page">
+
+    <!-- HERO -->
+    <section class="gallery-hero">
+      <span class="gallery-eyebrow">OUR WORK IN PICTURES</span>
+
+      <h1>Our <span>Gallery</span></h1>
+
+      <p>
+        Take a look at our physiotherapy services, rehabilitation
+        exercises and the care we provide in the comfort of your home.
+      </p>
+
+      <div class="gallery-hero-features">
+        <span>✓ Professional Care</span>
+        <span>✓ Home Physiotherapy</span>
+        <span>✓ Recovery Support</span>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-section">
+      <div class="gallery-heading">
+        <div>
+          <span class="gallery-eyebrow">A CLOSER LOOK</span>
+          <h2>Our Work &amp; Activities</h2>
+        </div>
+
+        <p>
+          Discover our approach to treatment, movement
+          and rehabilitation.
+        </p>
+      </div>
+
+      <!-- FILTERS -->
+      <div class="gallery-filters" role="group" aria-label="Filter gallery images">
+
+        <button class="gallery-filter active" type="button"
+          data-filter="all" aria-pressed="true">All Photos</button>
+
+        <button class="gallery-filter" type="button"
+          data-filter="treatment" aria-pressed="false">Physiotherapy</button>
+
+        <button class="gallery-filter" type="button"
+          data-filter="rehabilitation" aria-pressed="false">Rehabilitation</button>
+
+        <button class="gallery-filter" type="button"
+          data-filter="home-care" aria-pressed="false">Home Care</button>
+
+      </div>
+
+      <!-- IMAGE GRID -->
+      <div class="gallery-grid">
+
+        <button class="gallery-item" type="button"
+          data-category="treatment"
+          data-title="Professional Treatment"
+          data-image="assets/images/gallery/physiotherapy-1.jpg"
+          aria-label="View professional physiotherapy photo">
+
+          <img src="assets/images/gallery/physiotherapy-1.jpg"
+            alt="Physiotherapist providing professional treatment" loading="lazy">
+
+          <span class="gallery-overlay">
+            <span class="gallery-item-category">PHYSIOTHERAPY</span>
+            <strong>Professional Treatment</strong>
+            <span class="gallery-view">View Photo ↗</span>
+          </span>
+        </button>
+
+        <button class="gallery-item" type="button"
+          data-category="rehabilitation"
+          data-title="Rehabilitation Exercises"
+          data-image="assets/images/gallery/rehabilitation-1.jpg"
+          aria-label="View rehabilitation exercises photo">
+
+          <img src="assets/images/gallery/rehabilitation-1.jpg"
+            alt="Patient performing rehabilitation exercises" loading="lazy">
+
+          <span class="gallery-overlay">
+            <span class="gallery-item-category">REHABILITATION</span>
+            <strong>Rehabilitation Exercises</strong>
+            <span class="gallery-view">View Photo ↗</span>
+          </span>
+        </button>
+
+        <button class="gallery-item" type="button"
+          data-category="home-care"
+          data-title="Physiotherapy at Home"
+          data-image="assets/images/gallery/home-physiotherapy-1.jpg"
+          aria-label="View home physiotherapy photo">
+
+          <img src="assets/images/gallery/home-physiotherapy-1.jpg"
+            alt="Physiotherapy care provided at home" loading="lazy">
+
+          <span class="gallery-overlay">
+            <span class="gallery-item-category">HOME CARE</span>
+            <strong>Physiotherapy at Home</strong>
+            <span class="gallery-view">View Photo ↗</span>
+          </span>
+        </button>
+
+        <button class="gallery-item" type="button"
+          data-category="treatment"
+          data-title="Hands-on Treatment"
+          data-image="assets/images/gallery/physiotherapy-2.jpg"
+          aria-label="View hands-on physiotherapy photo">
+
+          <img src="assets/images/gallery/physiotherapy-2.jpg"
+            alt="Hands-on physiotherapy treatment" loading="lazy">
+
+          <span class="gallery-overlay">
+            <span class="gallery-item-category">PHYSIOTHERAPY</span>
+            <strong>Hands-on Treatment</strong>
+            <span class="gallery-view">View Photo ↗</span>
+          </span>
+        </button>
+
+        <button class="gallery-item" type="button"
+          data-category="rehabilitation"
+          data-title="Movement and Recovery"
+          data-image="assets/images/gallery/rehabilitation-2.jpg"
+          aria-label="View movement and recovery photo">
+
+          <img src="assets/images/gallery/rehabilitation-2.jpg"
+            alt="Guided movement and recovery exercises" loading="lazy">
+
+          <span class="gallery-overlay">
+            <span class="gallery-item-category">REHABILITATION</span>
+            <strong>Movement &amp; Recovery</strong>
+            <span class="gallery-view">View Photo ↗</span>
+          </span>
+        </button>
+
+        <button class="gallery-item" type="button"
+          data-category="home-care"
+          data-title="Personalized Home Care"
+          data-image="assets/images/gallery/home-physiotherapy-2.jpg"
+          aria-label="View personalized home care photo">
+
+          <img src="assets/images/gallery/home-physiotherapy-2.jpg"
+            alt="Personalized physiotherapy care at home" loading="lazy">
+
+          <span class="gallery-overlay">
+            <span class="gallery-item-category">HOME CARE</span>
+            <strong>Personalized Home Care</strong>
+            <span class="gallery-view">View Photo ↗</span>
+          </span>
+        </button>
+
+      </div>
+
+      <p class="gallery-note">
+        Please use actual gallery images and ensure patient photos
+        are published only with appropriate consent.
+      </p>
+    </section>
+
+    <!-- APPOINTMENT BANNER -->
+    <section class="gallery-contact">
+      <div>
+        <span class="gallery-eyebrow">WE ARE HERE TO HELP</span>
+        <h2>Your Recovery Starts Here</h2>
+        <p>
+          Get personalized physiotherapy support in the comfort
+          of your home.
+        </p>
+      </div>
+
+      <a href="contact.html#appointment" class="gallery-cta">
+        Book an Appointment <span aria-hidden="true">→</span>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- SHARED FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <!-- GALLERY LIGHTBOX -->
+  <div class="gallery-lightbox" id="galleryLightbox"
+    role="dialog" aria-modal="true"
+    aria-label="Gallery image viewer" aria-hidden="true">
+
+    <button class="lightbox-close" type="button"
+      aria-label="Close image viewer">&times;</button>
+
+    <button class="lightbox-arrow lightbox-prev" type="button"
+      aria-label="Previous image">&#10094;</button>
+
+    <figure class="lightbox-figure">
+      <img id="lightboxImage" src="" alt="">
+      <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+
+    <button class="lightbox-arrow lightbox-next" type="button"
+      aria-label="Next image">&#10095;</button>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script src="js/script.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/gallery.js"></script>
+
+</body>
+</html>

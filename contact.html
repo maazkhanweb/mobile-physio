@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact Us | Mobile Physio</title>
+  <meta name="description" content="Contact Mobile Physio to discuss home physiotherapy, treatment options and appointments.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/whatsapp.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+
+  <!-- Shared Navbar -->
+  <div id="navbar-placeholder"></div>
+
+  <main class="contact-page">
+
+    <!-- Hero -->
+    <section class="contact-hero">
+      <div class="contact-hero-content">
+        <span class="contact-eyebrow">WE ARE HERE TO HELP</span>
+
+        <h1>Contact <span>Mobile Physio</span></h1>
+
+        <p>
+          Have questions about physiotherapy, treatment options or pricing?
+          Get in touch with our team to discuss your needs and arrange
+          an appointment at your home.
+        </p>
+
+        <a href="#appointment" class="contact-primary-btn">
+          Book an Appointment
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact information -->
+    <section class="contact-section">
+      <div class="contact-heading">
+        <span class="contact-eyebrow">GET IN TOUCH</span>
+        <h2>How Can We Help You?</h2>
+        <p>
+          Contact us to discuss your physiotherapy requirements
+          and available appointment options.
+        </p>
+      </div>
+
+      <div class="contact-info-grid">
+
+        <article class="contact-info-card">
+          <div class="contact-info-icon">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <h3>Call or WhatsApp</h3>
+          <p>Contact our team for enquiries and appointment arrangements.</p>
+          <a href="https://wa.me/923088944136"
+             target="_blank" rel="noopener noreferrer">
+            Chat on WhatsApp
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </article>
+
+        <article class="contact-info-card">
+          <div class="contact-info-icon">
+            <i class="fa-solid fa-house-medical"></i>
+          </div>
+          <h3>Home Physiotherapy</h3>
+          <p>
+            Ask about home visits, treatment options and service availability
+            in your area.
+          </p>
+          <a href="#appointment">
+            Enquire About a Visit
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </article>
+
+        <article class="contact-info-card">
+          <div class="contact-info-icon">
+            <i class="fa-regular fa-calendar-check"></i>
+          </div>
+          <h3>Appointments</h3>
+          <p>
+            Tell us about your requirements so our team can discuss
+            the next steps with you.
+          </p>
+          <a href="#appointment">
+            Request an Appointment
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Appointment form -->
+    <section class="contact-form-section" id="appointment">
+
+      <div class="contact-form-intro">
+        <span class="contact-eyebrow">BOOK YOUR APPOINTMENT</span>
+        <h2>Let's Discuss Your Care</h2>
+        <p>
+          Complete the form with your contact details and treatment
+          requirements. Our team can then follow up with you.
+        </p>
+
+        <div class="contact-form-benefits">
+          <p><i class="fa-solid fa-check"></i> Discuss your treatment needs</p>
+          <p><i class="fa-solid fa-check"></i> Ask about session charges</p>
+          <p><i class="fa-solid fa-check"></i> Check home visit availability</p>
+        </div>
+
+        <div class="contact-whatsapp-note">
+          <i class="fa-brands fa-whatsapp"></i>
+          <div>
+            <strong>Prefer WhatsApp?</strong>
+            <p>You can also contact our team directly.</p>
+            <a href="https://wa.me/923088944136"
+               target="_blank" rel="noopener noreferrer">
+              Message us on WhatsApp →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+
+        <h3>Appointment Enquiry</h3>
+        <p class="contact-form-subtitle">Please fill in the details below.</p>
+
+        <div class="contact-form-row">
+          <div class="contact-field">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="fullName"
+                   placeholder="Enter your full name"
+                   autocomplete="name" required>
+          </div>
+
+          <div class="contact-field">
+            <label for="phone">Phone / WhatsApp *</label>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="Enter your phone number"
+                   autocomplete="tel" required>
+          </div>
+        </div>
+
+        <div class="contact-form-row">
+          <div class="contact-field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email"
+                   autocomplete="email">
+          </div>
+
+          <div class="contact-field">
+            <label for="location">Your Location *</label>
+            <input type="text" id="location" name="location"
+                   placeholder="City or area"
+                   autocomplete="address-level2" required>
+          </div>
+        </div>
+
+        <div class="contact-field">
+          <label for="service">Service Required *</label>
+          <select id="service" name="service" required>
+            <option value="">Select a service</option>
+            <option value="Initial Assessment">Initial Assessment</option>
+            <option value="Individual Session">Individual Physiotherapy Session</option>
+            <option value="15-Day Package">15-Day Package</option>
+            <option value="30-Day Package">30-Day Package</option>
+            <option value="Rehabilitation">Rehabilitation Plan</option>
+            <option value="Other">Other Enquiry</option>
+          </select>
+        </div>
+
+        <div class="contact-form-row">
+          <div class="contact-field">
+            <label for="preferredDate">Preferred Date</label>
+            <input type="date" id="preferredDate" name="preferredDate">
+          </div>
+
+          <div class="contact-field">
+            <label for="preferredTime">Preferred Time</label>
+            <select id="preferredTime" name="preferredTime">
+              <option value="">Select preferred time</option>
+              <option value="Morning">Morning</option>
+              <option value="Afternoon">Afternoon</option>
+              <option value="Evening">Evening</option>
+              <option value="Flexible">Flexible</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="contact-field">
+          <label for="message">Message / Treatment Requirements</label>
+          <textarea id="message" name="message" rows="3"
+                    placeholder="Briefly describe your requirements"></textarea>
+        </div>
+
+        <button type="submit" class="contact-submit-btn">
+          Send Enquiry
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+        <p class="contact-form-note">
+          Submitting this form does not confirm an appointment.
+          Our team will need to confirm availability.
+        </p>
+
+        <p id="formMessage" class="contact-form-message"
+           role="status" aria-live="polite"></p>
+
+      </form>
+    </section>
+
+    <!-- Social links -->
+    
+<!-- Social links -->
+<section class="contact-social-section">
+  <span class="contact-eyebrow">STAY CONNECTED</span>
+  <h2>Follow Mobile Physio</h2>
+  <p>Follow us on social media for updates and physiotherapy information.</p>
+
+  <div class="contact-social-links">
+
+    <!-- Facebook -->
+    <a
+      href="https://www.facebook.com/share/1Ev8bCS7oL/?mibextid=wwXIfr"
+      class="contact-social-link facebook"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Follow Mobile Physio on Facebook"
+    >
+      <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+      <span>Facebook</span>
+      <i class="fa-solid fa-arrow-up-right-from-square social-external-icon"
+         aria-hidden="true"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a
+      href="https://www.instagram.com/mobile.physio01?stkn=MW5qcTV6cTR4YzYzNQ%3D%3D&utm_source=qr"
+      class="contact-social-link instagram"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Follow Mobile Physio on Instagram"
+    >
+      <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+      <span>Instagram</span>
+      <i class="fa-solid fa-arrow-up-right-from-square social-external-icon"
+         aria-hidden="true"></i>
+    </a>
+
+    <!-- TikTok -->
+    <a
+      href="https://www.tiktok.com/@mobilephysioo?_r=1&_t=ZS-9AFlQ2dPabc"
+      class="contact-social-link tiktok"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Follow Mobile Physio on TikTok"
+    >
+      <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+      <span>TikTok</span>
+      <i class="fa-solid fa-arrow-up-right-from-square social-external-icon"
+         aria-hidden="true"></i>
+    </a>
+
+  </div>
+</section>
+
+
+  </main>
+
+  <!-- Shared Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Shared site components -->
+  <script src="js/script.js"></script>
+  <script src="js/components.js"></script>
+
+  <!-- Google Sheets integration -->
+  <script>
+    const GOOGLE_SCRIPT_URL =
+      "https://script.google.com/macros/s/AKfycbylRj8nXu3w-wtcGmv-0uXsLbbJBqt53EReppavDSB2nICvt6Tuc8dGNAFmQ9BzRu1u-A/exec";
+
+    const contactForm = document.getElementById("contactForm");
+    const formMessage = document.getElementById("formMessage");
+    const preferredDate = document.getElementById("preferredDate");
+
+    // Prevent choosing a date in the past.
+    if (preferredDate) {
+      const now = new Date();
+      const localToday = new Date(
+        now.getTime() - now.getTimezoneOffset() * 60000
+      ).toISOString().split("T")[0];
+
+      preferredDate.min = localToday;
+    }
+
+    contactForm.addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      if (!contactForm.reportValidity()) return;
+
+      const submitButton = contactForm.querySelector(".contact-submit-btn");
+
+      const getValue = (name) => {
+        const field = contactForm.elements.namedItem(name);
+        return field ? field.value.trim() : "";
+      };
+
+      const data = {
+        name: getValue("fullName"),
+        email: getValue("email"),
+        phone: getValue("phone"),
+        address: getValue("location"),
+        service: getValue("service"),
+        package: getValue("service"),
+        date: getValue("preferredDate"),
+        time: getValue("preferredTime"),
+        message: getValue("message")
+      };
+
+      submitButton.disabled = true;
+      submitButton.innerHTML =
+        '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
+      formMessage.className = "contact-form-message visible";
+      formMessage.textContent = "Submitting your enquiry...";
+
+      try {
+        await fetch(GOOGLE_SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8"
+          },
+          body: JSON.stringify(data)
+        });
+
+        formMessage.textContent =
+          "Your enquiry has been sent. Our team will contact you to discuss availability. Please verify the submission with our team if you need confirmation.";
+
+        contactForm.reset();
+
+      } catch (error) {
+        console.error("Form submission error:", error);
+
+        formMessage.textContent =
+          "We could not send your enquiry. Please contact us through WhatsApp.";
+      } finally {
+        submitButton.disabled = false;
+        submitButton.innerHTML =
+          'Send Enquiry <i class="fa-solid fa-arrow-right"></i>';
+      }
+    });
+  </script>
+
+</body>
+</html>

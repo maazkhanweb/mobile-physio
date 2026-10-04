@@ -1,0 +1,672 @@
+
+/* =========================================
+   MOBILE PHYSIO — PAYMENT PLAN PAGE
+   All styles are scoped to this page.
+========================================= */
+
+.payment-page {
+  --pay-primary: #087f86;
+  --pay-dark: #07535d;
+  --pay-accent: #19a6ac;
+  --pay-text: #173b46;
+  --pay-muted: #647782;
+  --pay-border: #d8e9ec;
+  --pay-bg: #f5fafb;
+
+  color: var(--pay-text);
+  background: var(--pay-bg);
+  font-family: "DM Sans", Arial, sans-serif;
+  line-height: 1.55;
+}
+
+.payment-page *,
+.payment-page *::before,
+.payment-page *::after {
+  box-sizing: border-box;
+}
+
+.payment-page a {
+  text-decoration: none;
+}
+
+.payment-eyebrow {
+  display: inline-block;
+  color: var(--pay-primary);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+/* HERO */
+
+.payment-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  padding: 48px 20px 42px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(25,166,172,.10), transparent 32%),
+    radial-gradient(circle at 90% 90%, rgba(8,127,134,.09), transparent 30%),
+    linear-gradient(135deg, #fff, #e8f7f8);
+  border-bottom: 1px solid var(--pay-border);
+}
+
+.payment-hero-inner {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.payment-hero .payment-eyebrow {
+  margin-bottom: 7px;
+}
+
+.payment-hero h1 {
+  margin: 5px 0 12px;
+  color: var(--pay-dark);
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.15;
+  overflow-wrap: break-word;
+}
+
+.payment-hero h1 span {
+  color: var(--pay-primary);
+}
+
+.payment-hero p {
+  max-width: 660px;
+  margin: 0 auto;
+  color: var(--pay-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.payment-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 20px;
+  margin: 17px 0 19px;
+}
+
+.payment-features span {
+  color: var(--pay-dark);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.payment-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 42px;
+  padding: 10px 20px;
+  color: #fff;
+  background: linear-gradient(110deg, var(--pay-primary), var(--pay-dark));
+  border-radius: 26px;
+  box-shadow: 0 5px 14px rgba(7,83,93,.13);
+  font-size: 12px;
+  font-weight: 800;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.payment-primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(7,83,93,.18);
+}
+
+/* MAIN SECTION */
+
+.payment-section {
+  width: 100%;
+  padding: 38px 18px 30px;
+}
+
+.payment-heading {
+  max-width: 600px;
+  margin: 0 auto 22px;
+  text-align: center;
+}
+
+.payment-heading h2 {
+  margin: 6px 0 7px;
+  color: var(--pay-dark);
+  font-size: 27px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.payment-heading > p {
+  margin: 0;
+  color: var(--pay-muted);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+/* TWO COMPACT MAIN CARDS */
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 14px;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.payment-card {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid var(--pay-border);
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(7,83,93,.04);
+  transition: box-shadow .2s ease, border-color .2s ease;
+}
+
+.payment-card:hover {
+  box-shadow: 0 7px 18px rgba(7,83,93,.08);
+}
+
+.payment-card-featured {
+  border-color: var(--pay-accent);
+}
+
+.payment-card-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 4px;
+  color: var(--pay-primary);
+  background: #e8f6f7;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.payment-plan-label {
+  color: var(--pay-primary);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .9px;
+}
+
+.payment-card h3 {
+  margin: 2px 0 0;
+  color: var(--pay-dark);
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.payment-description {
+  margin: 0 0 7px;
+  color: var(--pay-muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* SESSION PRICE BOXES */
+
+.session-prices {
+  display: grid;
+  gap: 8px;
+  margin: 4px 0 3px;
+}
+
+.price-row {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  padding: 9px;
+  background: #f5fafb;
+  border: 1px solid #d3e9ec;
+  border-radius: 10px;
+}
+
+.price-icon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  background: var(--pay-primary);
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.price-details {
+  min-width: 0;
+}
+
+.price-label {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--pay-dark);
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+
+.price-amount {
+  display: block;
+  color: var(--pay-primary);
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.price-description {
+  margin: 3px 0 0;
+  color: var(--pay-muted);
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+/* PACKAGE PRICE BOXES */
+
+.package-list {
+  display: grid;
+  gap: 8px;
+  margin: 4px 0 3px;
+}
+
+.package-item {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  overflow: hidden;
+  background: linear-gradient(110deg, #f7fcfc, #eaf7f8);
+  border: 1px solid #d3e9ec;
+  border-radius: 10px;
+}
+
+.package-days {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  min-height: 60px;
+  padding: 4px;
+  color: #fff;
+  background: var(--pay-primary);
+  text-align: center;
+}
+
+.package-days strong {
+  font-size: 19px;
+  line-height: 1.1;
+}
+
+.package-days span {
+  margin-top: 3px;
+  font-size: 7px;
+  font-weight: 800;
+}
+
+.package-info {
+  min-width: 0;
+  padding: 7px 7px 7px 0;
+}
+
+.package-info small {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--pay-dark);
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: .4px;
+}
+
+.package-info > strong {
+  display: block;
+  color: var(--pay-primary);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.package-info p {
+  margin: 3px 0 0;
+  color: var(--pay-muted);
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+/* CARD BOTTOM AND BENEFITS */
+
+.payment-card-bottom {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-top: 3px;
+}
+
+.payment-list {
+  display: grid;
+  gap: 6px;
+  margin: 5px 0 12px;
+  padding: 9px 0 0;
+  border-top: 1px solid var(--pay-border);
+  list-style: none;
+}
+
+.payment-list li {
+  display: grid;
+  grid-template-columns: 13px minmax(0, 1fr);
+  gap: 6px;
+  align-items: start;
+  color: var(--pay-text);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.payment-list li i {
+  margin-top: 3px;
+  color: var(--pay-primary);
+  font-size: 10px;
+}
+
+.payment-card-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 100%;
+  min-height: 38px;
+  margin-top: auto;
+  padding: 9px 10px;
+  color: var(--pay-primary);
+  background: #fff;
+  border: 1px solid var(--pay-primary);
+  border-radius: 7px;
+  font-size: 10px;
+  font-weight: 800;
+  text-align: center;
+  transition: color .2s ease, background .2s ease;
+}
+
+.payment-card-btn:hover,
+.payment-card-featured .payment-card-btn {
+  color: #fff;
+  background: var(--pay-primary);
+}
+
+.payment-card-featured .payment-card-btn:hover {
+  background: var(--pay-dark);
+}
+
+.payment-disclaimer {
+  max-width: 700px;
+  margin: 14px auto 0;
+  color: var(--pay-muted);
+  font-size: 10px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* CONTACT BANNER */
+
+.payment-contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: calc(100% - 36px);
+  max-width: 850px;
+  margin: 0 auto 35px;
+  padding: 22px;
+  background: linear-gradient(115deg, #e9f7f8, #d9eff0);
+  border: 1px solid var(--pay-border);
+  border-radius: 14px;
+}
+
+.payment-contact h2 {
+  margin: 6px 0;
+  color: var(--pay-dark);
+  font-size: 23px;
+  line-height: 1.3;
+}
+
+.payment-contact p {
+  max-width: 500px;
+  margin: 0;
+  color: var(--pay-muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.payment-contact .payment-primary-btn {
+  flex-shrink: 0;
+}
+
+/* TABLET */
+
+@media (max-width: 760px) {
+  .payment-grid {
+    max-width: 600px;
+    gap: 12px;
+  }
+
+  .payment-card {
+    padding: 13px;
+  }
+
+  .payment-card h3 {
+    font-size: 16px;
+  }
+
+  .price-amount,
+  .package-info > strong {
+    font-size: 17px;
+  }
+
+  .payment-contact {
+    align-items: flex-start;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 560px) {
+  .payment-hero {
+    padding: 38px 16px 32px;
+  }
+
+  .payment-hero h1 {
+    font-size: 2.2rem;
+    line-height: 1.18;
+  }
+
+  .payment-hero p {
+    font-size: 12px;
+  }
+
+  .payment-features {
+    gap: 7px 12px;
+    margin: 14px 0 17px;
+  }
+
+  .payment-features span {
+    font-size: 10px;
+  }
+
+  .payment-section {
+    padding: 30px 14px 26px;
+  }
+
+  .payment-heading {
+    margin-bottom: 18px;
+  }
+
+  .payment-heading h2 {
+    font-size: 23px;
+  }
+
+  .payment-grid {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 380px;
+    gap: 13px;
+  }
+
+  .payment-card {
+    padding: 16px;
+  }
+
+  .payment-card h3 {
+    font-size: 17px;
+  }
+
+  .payment-description {
+    font-size: 11px;
+  }
+
+  .payment-contact {
+    flex-direction: column;
+    gap: 15px;
+    width: calc(100% - 28px);
+    margin-bottom: 28px;
+    padding: 18px;
+  }
+
+  .payment-contact .payment-primary-btn {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .payment-page *,
+  .payment-page *::before,
+  .payment-page *::after {
+    transition: none !important;
+  }
+}
+
+/* =====================================
+   PAYMENT PLAN: WHATSAPP ICON FIX
+===================================== */
+
+body:has(.payment-page) .whatsapp-float {
+  position: fixed;
+  right: 30px;
+  bottom: 28px;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+  padding: 0;
+
+  background: #20d366;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+
+  font-size: 0;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.15);
+}
+
+body:has(.payment-page) .whatsapp-float i {
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-family: "Font Awesome 6 Brands";
+  font-size: 29px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+body:has(.payment-page) .whatsapp-float:hover {
+  background: #17bd59;
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  body:has(.payment-page) .whatsapp-float {
+    right: 16px;
+    bottom: 18px;
+    width: 54px;
+    height: 54px;
+  }
+
+  body:has(.payment-page) .whatsapp-float i {
+    font-size: 26px;
+  }
+}
+
+/* =====================================
+   PAYMENT PLAN: FOOTER LINKS FIX
+===================================== */
+
+body:has(.payment-page) .site-footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+body:has(.payment-page) .site-footer .footer-links h3 {
+  margin: 0 0 8px;
+  color: #ffffff;
+}
+
+body:has(.payment-page) .site-footer .footer-links a {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+
+  color: #d8eef2;
+  font-size: 14px;
+  line-height: 1.6;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+body:has(.payment-page) .site-footer .footer-links a:hover {
+  color: #42d5d0;
+  text-decoration: underline;
+}
+
+body:has(.payment-page) .site-footer .footer-links a:visited {
+  color: #d8eef2;
+}
+
+body:has(.payment-page) .site-footer .footer-container {
+  align-items: start;
+}
+
+@media (max-width: 600px) {
+  body:has(.payment-page) .site-footer .footer-links {
+    gap: 8px;
+  }
+}
+
+/* Hide footer page links on Payment Plan page */
+body:has(.payment-page) .site-footer .footer-links {
+  display: none !important;
+}
+
+/* Adjust footer layout after removing Quick Links */
+body:has(.payment-page) .site-footer .footer-container {
+  grid-template-columns: 1fr 1fr;
+}

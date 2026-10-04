@@ -1,0 +1,577 @@
+
+/* ========================================
+   MOBILE PHYSIO - ABOUT PAGE
+======================================== */
+
+.about-page {
+  --teal: #087f8c;
+  --teal-light: #dff5f7;
+  --navy: #10334b;
+  --text: #526b7b;
+  --border: #dceff1;
+
+  color: var(--navy);
+  background: #fff;
+  overflow: hidden;
+}
+
+.about-page *,
+.about-page *::before,
+.about-page *::after {
+  box-sizing: border-box;
+}
+
+.about-page img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.about-page p {
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.about-page .eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+/* HERO */
+
+.about-hero {
+  padding: 95px 0 45px;
+  background:
+    radial-gradient(
+      circle at 78% 10%,
+      #d7f3f5 0,
+      transparent 30%
+    ),
+    linear-gradient(120deg, #f8fdfe, #eaf9fb);
+}
+
+.about-hero-inner {
+  width: min(1400px, calc(100% - 80px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: 55px;
+}
+
+.about-hero-content h1 {
+  margin: 0 0 14px;
+  font-size: clamp(38px, 4.2vw, 60px);
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+}
+
+.about-hero-content h2 {
+  max-width: 540px;
+  margin: 0 0 22px;
+  color: var(--teal);
+  font-size: clamp(23px, 2.5vw, 34px);
+  line-height: 1.35;
+}
+
+.about-hero-content p {
+  max-width: 600px;
+  margin: 0 0 25px;
+}
+
+.about-btn {
+  min-height: 49px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 23px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #159aa5, #075866);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 22px #087f8c20;
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.about-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px #087f8c30;
+}
+
+.about-hero-image {
+  min-width: 0;
+}
+
+.about-hero-image img {
+  height: 470px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 100px 28px 65px 28px;
+  box-shadow: 0 20px 50px #10334b18;
+}
+
+/* MISSION, VISION, VALUES */
+
+.about-values {
+  width: min(1400px, calc(100% - 80px));
+  margin: 0 auto;
+  padding: 15px 0 65px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.value-card {
+  padding: 30px 26px;
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: linear-gradient(145deg, #effbfc, #e2f6f8);
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px #10334b10;
+}
+
+.value-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 16px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #c9eef1;
+  color: var(--teal);
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.value-card h3 {
+  margin: 0 0 12px;
+  font-size: 21px;
+}
+
+.value-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* LEADERSHIP PROFILES */
+
+.leader-section {
+  width: min(1300px, calc(100% - 80px));
+  margin: 0 auto;
+  padding: 20px 0 75px;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1.4fr);
+  align-items: start;
+  gap: 48px;
+}
+
+.leader-image {
+  position: sticky;
+  top: 110px;
+}
+
+.leader-image img {
+  height: 430px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 22px;
+  box-shadow: 0 15px 40px #10334b14;
+}
+
+.leader-content {
+  min-width: 0;
+}
+
+.leader-content h2 {
+  margin: 0 0 10px;
+  font-size: clamp(28px, 3vw, 38px);
+  line-height: 1.2;
+}
+
+.leader-content h3 {
+  margin: 0 0 8px;
+  color: var(--teal);
+  font-size: 25px;
+  line-height: 1.35;
+}
+
+.leader-role {
+  margin: 0 0 20px;
+  color: var(--navy) !important;
+  font-size: 15px !important;
+  font-weight: 700;
+}
+
+.leader-content > p {
+  margin: 0 0 16px;
+}
+
+.leader-content blockquote {
+  margin: 18px 0 22px;
+  padding: 14px 20px;
+  border-left: 4px solid var(--teal);
+  border-radius: 0 12px 12px 0;
+  background: #eaf8fa;
+  color: #087f8c;
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+/* EXPERIENCE AND CREDENTIALS */
+
+.leader-subsection {
+  margin-top: 28px;
+}
+
+.leader-subsection h4 {
+  margin: 0 0 15px;
+  font-size: 21px;
+  color: var(--navy);
+}
+
+.experience-card {
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  background: #f7fcfd;
+}
+
+.experience-card > strong,
+.experience-card > span,
+.experience-card > small {
+  display: block;
+}
+
+.experience-card > strong {
+  font-size: 16px;
+}
+
+.experience-card > span {
+  margin-top: 6px;
+  color: var(--teal);
+  font-size: 14px;
+}
+
+.experience-card > small {
+  margin-top: 5px;
+  color: #758994;
+  font-size: 12px;
+}
+
+.experience-card ul {
+  padding-left: 20px;
+  margin: 14px 0 0;
+}
+
+.experience-card li {
+  margin-bottom: 9px;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.credential-list {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.credential-list li {
+  position: relative;
+  padding: 15px 17px 15px 42px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.credential-list li::before {
+  content: "✓";
+  position: absolute;
+  top: 16px;
+  left: 15px;
+  width: 18px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #d9f3e7;
+  color: #087f53;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.credential-list strong,
+.credential-list span {
+  display: block;
+}
+
+.credential-list strong {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.credential-list span {
+  margin-top: 4px;
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* FOUNDER / DIRECTOR SEPARATION */
+
+.director-section {
+  padding-top: 55px;
+  border-top: 1px solid var(--border);
+}
+
+/* CALL TO ACTION */
+
+.about-cta {
+  width: min(1300px, calc(100% - 80px));
+  margin: 0 auto 75px;
+  padding: 35px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  border-radius: 22px;
+  background: linear-gradient(115deg, #eaf9fb, #f7fdfe);
+  border: 1px solid var(--border);
+}
+
+.about-cta > div {
+  max-width: 720px;
+}
+
+.about-cta h2 {
+  margin: 0 0 10px;
+  font-size: clamp(24px, 2.8vw, 34px);
+  line-height: 1.3;
+}
+
+.about-cta p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* SCROLL REVEAL */
+
+.about-page .section-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease,
+              transform 0.7s ease;
+}
+
+.about-page .section-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+  .about-hero-inner {
+    width: calc(100% - 48px);
+    gap: 30px;
+  }
+
+  .about-hero-image img {
+    height: 390px;
+  }
+
+  .about-values {
+    width: calc(100% - 48px);
+    gap: 14px;
+  }
+
+  .value-card {
+    padding: 25px 17px;
+  }
+
+  .leader-section {
+    width: calc(100% - 48px);
+    grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.3fr);
+    gap: 30px;
+  }
+
+  .leader-image img {
+    height: 350px;
+  }
+
+  .about-cta {
+    width: calc(100% - 48px);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .about-hero {
+    padding: 35px 0;
+  }
+
+  .about-hero-inner {
+    width: calc(100% - 36px);
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 39px;
+  }
+
+  .about-hero-content h2 {
+    font-size: 25px;
+  }
+
+  .about-hero-content p,
+  .about-page p {
+    font-size: 14px;
+  }
+
+  .about-hero-image img {
+    height: 300px;
+    border-radius: 55px 20px 35px 20px;
+  }
+
+  .about-values {
+    width: calc(100% - 36px);
+    grid-template-columns: 1fr;
+    padding: 25px 0 45px;
+  }
+
+  .value-card {
+    padding: 25px 20px;
+  }
+
+  .leader-section {
+    width: calc(100% - 36px);
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 15px 0 50px;
+  }
+
+  .leader-image {
+    position: static;
+  }
+
+  .leader-image img {
+    height: 350px;
+    object-position: center 20%;
+  }
+
+  .leader-content h2 {
+    font-size: 30px;
+  }
+
+  .leader-content h3 {
+    font-size: 23px;
+  }
+
+  .director-section {
+    padding-top: 40px;
+  }
+
+  .about-cta {
+    width: calc(100% - 36px);
+    margin-bottom: 45px;
+    padding: 27px 22px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-page *,
+  .about-page *::before,
+  .about-page *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .about-page .section-reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ========================================
+   FIX: ABOUT PAGE LEADERS NOT VISIBLE
+======================================== */
+
+/* Ensure both founder sections are visible */
+.about-page .leader-section,
+.about-page .founder-section,
+.about-page .director-section {
+  display: grid !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+}
+
+/* Ensure founder text and qualifications appear */
+.about-page .leader-content,
+.about-page .leader-subsection,
+.about-page .credential-list,
+.about-page .experience-card {
+  display: block;
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: auto;
+  overflow: visible;
+}
+
+/* Keep founder images visible */
+.about-page .leader-image {
+  display: block;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Disable reveal hiding caused by animation */
+.about-page .section-reveal {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+
+/* Ensure the footer follows all About page content */
+.about-page {
+  display: block;
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+}
+
+.about-cta {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+}
