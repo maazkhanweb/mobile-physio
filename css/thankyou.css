@@ -1,0 +1,716 @@
+/* =========================================
+   MOBILE PHYSIO - THANK YOU PAGE
+========================================= */
+
+:root {
+  --thank-primary: #087f86;
+  --thank-primary-dark: #07535d;
+  --thank-accent: #19a6ac;
+  --thank-text: #173b46;
+  --thank-muted: #647782;
+  --thank-border: #dcebed;
+  --thank-bg: #f4fafb;
+  --thank-green: #20b95a;
+}
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.thankyou-page {
+  position: relative;
+  min-height: auto;
+
+  /* Extra top space so navbar doesn't cover content */
+  padding: 45px 15px 35px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(25, 166, 172, 0.08),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(8, 127, 134, 0.06),
+      transparent 24%
+    ),
+    var(--thank-bg);
+}
+
+
+/* =========================================
+   BACKGROUND DECORATIONS
+========================================= */
+
+.thankyou-decoration {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.decoration-one {
+  width: 170px;
+  height: 170px;
+
+  top: -70px;
+  left: -70px;
+
+  background: rgba(25, 166, 172, 0.06);
+}
+
+.decoration-two {
+  width: 190px;
+  height: 190px;
+
+  right: -80px;
+  bottom: -80px;
+
+  background: rgba(8, 127, 134, 0.05);
+}
+
+
+/* =========================================
+   MAIN SECTION
+========================================= */
+
+.thankyou-section {
+  position: relative;
+  z-index: 2;
+
+  width: min(100%, 780px);
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   THANK YOU CARD
+========================================= */
+
+.thankyou-card {
+  width: min(100%, 570px);
+
+  margin: 0 auto;
+
+  padding: 22px 28px 20px;
+
+  background: rgba(255, 255, 255, 0.98);
+
+  border: 1px solid var(--thank-border);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 12px 32px rgba(7, 83, 93, 0.07),
+    0 3px 10px rgba(7, 83, 93, 0.03);
+
+  animation: thankyouCardIn .55s ease both;
+}
+
+
+/* =========================================
+   SUCCESS ICON
+========================================= */
+
+.success-icon-wrapper {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 7px;
+}
+
+.success-icon {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+
+  color: #fff;
+
+  background: linear-gradient(
+    135deg,
+    var(--thank-accent),
+    var(--thank-primary)
+  );
+
+  border-radius: 50%;
+
+  font-size: 19px;
+
+  box-shadow:
+    0 7px 16px rgba(8, 127, 134, 0.16);
+
+  animation: successPop .5s .1s ease both;
+}
+
+.success-icon::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -5px;
+
+  border: 1px solid rgba(25, 166, 172, 0.14);
+
+  border-radius: 50%;
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.thankyou-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 5px;
+
+  color: var(--thank-primary);
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.thankyou-card h1 {
+  max-width: 520px;
+
+  margin: 0 auto;
+
+  color: var(--thank-primary-dark);
+
+  font-size: 27px;
+
+  line-height: 1.1;
+
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+}
+
+.thankyou-card h1 span {
+  display: block;
+
+  color: var(--thank-primary);
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.thankyou-description {
+  max-width: 470px;
+
+  margin: 8px auto 0;
+
+  color: var(--thank-muted);
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   STEPS
+========================================= */
+
+.thankyou-steps {
+  display: grid;
+
+  max-width: 490px;
+
+  margin: 15px auto 0;
+
+  padding: 11px 14px;
+
+  text-align: left;
+
+  background: #f7fbfc;
+
+  border: 1px solid var(--thank-border);
+
+  border-radius: 11px;
+}
+
+.thankyou-step {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+.step-icon {
+  flex: 0 0 auto;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  color: var(--thank-primary);
+
+  background: #e5f7f8;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+}
+
+.thankyou-step strong {
+  display: block;
+
+  color: var(--thank-text);
+
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+.thankyou-step span {
+  display: block;
+
+  margin-top: 1px;
+
+  color: var(--thank-muted);
+
+  font-size: 7.5px;
+
+  line-height: 1.35;
+}
+
+.step-line {
+  width: 1px;
+
+  height: 8px;
+
+  margin: 1px 0 1px 15px;
+
+  background: #cce4e6;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.thankyou-actions {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  margin-top: 14px;
+}
+
+.thankyou-primary-btn,
+.thankyou-whatsapp-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  min-height: 36px;
+
+  padding: 0 14px;
+
+  border-radius: 7px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    background .2s ease;
+}
+
+
+/* Home button */
+
+.thankyou-primary-btn {
+  color: #fff;
+
+  background: linear-gradient(
+    135deg,
+    var(--thank-primary),
+    var(--thank-accent)
+  );
+
+  box-shadow:
+    0 6px 13px rgba(8, 127, 134, 0.14);
+}
+
+.thankyou-primary-btn:hover {
+  color: #fff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 9px 17px rgba(8, 127, 134, 0.18);
+}
+
+
+/* WhatsApp button */
+
+.thankyou-whatsapp-btn {
+  color: #158747;
+
+  background: #effbf4;
+
+  border: 1px solid #cdeed9;
+}
+
+.thankyou-whatsapp-btn:hover {
+  color: #fff;
+
+  background: var(--thank-green);
+
+  border-color: var(--thank-green);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   PRIVACY NOTE
+========================================= */
+
+.thankyou-note {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  max-width: 450px;
+
+  margin: 12px auto 0;
+
+  padding-top: 10px;
+
+  border-top: 1px solid var(--thank-border);
+}
+
+.thankyou-note > i {
+  color: var(--thank-primary);
+
+  font-size: 10px;
+}
+
+.thankyou-note p {
+  margin: 0;
+
+  color: var(--thank-muted);
+
+  font-size: 7px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================
+   BENEFIT CARDS
+========================================= */
+
+.thankyou-benefits {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  width: min(100%, 570px);
+
+  gap: 7px;
+
+  margin: 10px auto 0;
+}
+
+.thankyou-benefit {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 9px;
+
+  text-align: left;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border: 1px solid var(--thank-border);
+
+  border-radius: 9px;
+
+  box-shadow:
+    0 4px 12px rgba(7, 83, 93, 0.035);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.thankyou-benefit:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 16px rgba(7, 83, 93, 0.06);
+}
+
+.thankyou-benefit > div {
+  flex: 0 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 30px;
+
+  height: 30px;
+
+  color: var(--thank-primary);
+
+  background: #e8f7f8;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+}
+
+.thankyou-benefit section strong {
+  display: block;
+
+  color: var(--thank-text);
+
+  font-size: 8px;
+
+  font-weight: 800;
+}
+
+.thankyou-benefit section span {
+  display: block;
+
+  margin-top: 1px;
+
+  color: var(--thank-muted);
+
+  font-size: 6.5px;
+
+  line-height: 1.3;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes thankyouCardIn {
+
+  from {
+    opacity: 0;
+
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes successPop {
+
+  0% {
+    opacity: 0;
+
+    transform: scale(.7);
+  }
+
+  70% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform: scale(1);
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+  .thankyou-page {
+    padding: 38px 14px 30px;
+  }
+
+  .thankyou-card {
+    padding: 20px 23px 19px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .thankyou-page {
+    padding: 30px 9px 25px;
+  }
+
+  .thankyou-card {
+    width: 100%;
+
+    padding: 20px 13px 18px;
+
+    border-radius: 15px;
+  }
+
+  .success-icon {
+    width: 46px;
+    height: 46px;
+
+    font-size: 17px;
+  }
+
+  .thankyou-card h1 {
+    font-size: 24px;
+  }
+
+  .thankyou-description {
+    font-size: 10px;
+
+    line-height: 1.45;
+  }
+
+  .thankyou-steps {
+    padding: 10px;
+
+    margin-top: 13px;
+  }
+
+  .thankyou-step {
+    gap: 7px;
+  }
+
+  .step-icon {
+    width: 28px;
+    height: 28px;
+
+    font-size: 10px;
+  }
+
+  .thankyou-step strong {
+    font-size: 8px;
+  }
+
+  .thankyou-step span {
+    font-size: 7px;
+  }
+
+  .step-line {
+    margin-left: 14px;
+  }
+
+  .thankyou-actions {
+    margin-top: 13px;
+  }
+
+  .thankyou-primary-btn,
+  .thankyou-whatsapp-btn {
+    min-height: 35px;
+
+    padding: 0 11px;
+
+    font-size: 8px;
+  }
+
+  .thankyou-note {
+    margin-top: 10px;
+
+    padding-top: 8px;
+  }
+
+  .thankyou-note p {
+    font-size: 6.5px;
+  }
+
+  .thankyou-benefits {
+    grid-template-columns: 1fr;
+
+    width: 100%;
+
+    gap: 6px;
+
+    margin-top: 8px;
+  }
+
+  .thankyou-benefit {
+    padding: 8px;
+  }
+
+}
+/* =========================================
+   FIX: MOVE THANK YOU CONTENT DOWN
+========================================= */
+
+/* Desktop / Laptop */
+.thankyou-page {
+  padding-top: 85px !important;
+}
+
+/* Tablet */
+@media (max-width: 800px) {
+  .thankyou-page {
+    padding-top: 65px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .thankyou-page {
+    padding-top: 55px !important;
+  }
+}
