@@ -152,9 +152,17 @@
 
           <div class="contact-field">
             <label for="phone">Phone / WhatsApp *</label>
-            <input type="tel" id="phone" name="phone"
-                   placeholder="Enter your phone number"
-                   autocomplete="tel" required>
+            <input
+  type="tel"
+  id="phone"
+  name="phone"
+  placeholder="Enter your phone number"
+  autocomplete="tel"
+  inputmode="numeric"
+  pattern="[0-9]+"
+  maxlength="15"
+  required
+>
           </div>
         </div>
 
@@ -300,6 +308,13 @@
     const contactForm = document.getElementById("contactForm");
     const formMessage = document.getElementById("formMessage");
     const preferredDate = document.getElementById("preferredDate");
+    const phoneInput = document.getElementById("phone");
+
+if (phoneInput) {
+  phoneInput.addEventListener("input", function () {
+    this.value = this.value.replace(/\D/g, "");
+  });
+}
 
     // Prevent choosing a date in the past.
     if (preferredDate) {
@@ -351,11 +366,9 @@
           },
           body: JSON.stringify(data)
         });
+contactForm.reset();
 
-        formMessage.textContent =
-          "Your enquiry has been sent. Our team will contact you to discuss availability. Please verify the submission with our team if you need confirmation.";
-
-        contactForm.reset();
+window.location.href = "thankyou.html";
 
       } catch (error) {
         console.error("Form submission error:", error);
